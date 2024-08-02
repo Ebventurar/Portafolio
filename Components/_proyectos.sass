@@ -1,0 +1,48 @@
+#grid_proyectos
+    width: 100%
+    display: grid
+    color: black
+    grid-template-columns: repeat(3, 25%)
+    justify-content: center
+    gap: 30px
+    row-gap: 30px
+
+
+.cont_proyecto
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 1fr 3fr 5fr
+    gap: 0px 0px
+    align-items: center
+    width: 100%
+    height: 28em
+    background-color: #fff
+    border-radius: 25px
+    padding: 25px
+    gap: 10px
+    transition: all 0.7s 
+    h2
+        color: #000
+        font-weight: 700
+        text-align: center
+    .img_proyecto
+        border-radius: 10px
+        width: 100%
+        min-height: 169px
+        border: 1px solid black
+    .descripcion_proyecto
+        text-align: center
+        color: #626262
+        font-weight: 400
+
+    &:hover
+        transform: scale(1.05)
+        transform-origin: 50% 50%
+
+@media (max-width: 650px) 
+    #grid_proyectos
+        grid-template-columns: 1fr
+
+@media (min-width: 650px) and (max-width: 1060px)
+    #grid_proyectos
+        grid-template-columns: 1fr 1fr
