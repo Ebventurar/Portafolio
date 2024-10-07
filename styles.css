@@ -33,34 +33,47 @@ a {
   color: white;
 }
 
-main {
-  margin: 150px 70px 40px 70px;
-}
-
 h1 {
   font-family: "Geologica", sans-serif;
-  font-size: 75px;
+  font-size: 5rem;
   text-align: center;
-  margin: 60px 0;
+  padding: 10% 5% 5% 5%;
 }
 
-@media (max-width: 600px) {
-  main {
-    width: 100%;
-    margin: 150px 0 40px 0;
-    padding: 0 30px;
+.main_div {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .main_div {
+    padding: 5%;
   }
   h1 {
-    font-size: 60px;
+    font-size: 4rem;
+    padding-bottom: 10%;
+  }
+}
+@media (max-width: 600px) {
+  .main_div {
+    padding: 15% 5%;
+  }
+  h1 {
+    font-size: 2rem;
+    padding-bottom: 10%;
   }
 }
 #navbar {
-  width: 100vw;
+  width: 30vw;
   position: fixed;
   top: 25px;
+  left: 35%;
   display: flex;
   justify-content: center;
   align-items: center;
+  display: inline;
   z-index: 9999;
 }
 
@@ -86,6 +99,22 @@ h1 {
   background-color: hsla(0, 0%, 10%, 0.5);
 }
 
+.flags {
+  width: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flags__item {
+  width: 30px;
+}
+
+.flags__img {
+  display: block;
+  cursor: pointer;
+}
+
 @media (max-width: 600px) {
   #nav_principal {
     gap: 5px;
@@ -97,9 +126,10 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  min-height: 95px;
+  min-height: 10vh;
   justify-content: space-evenly;
   padding: 20 120px;
+  margin-top: 5vh;
 }
 #navFooter h3 {
   font-size: 24px;
@@ -119,23 +149,22 @@ h1 {
     gap: 15px;
   }
 }
-main .p_inicio, main #sobremi_descripcion {
-  font-size: 20px;
-  margin: auto 0;
-  padding: 0 220px;
+main .p_home, main #sobremi_descripcion {
+  font-size: 1.5rem;
+  padding: 5% 10%;
   text-align: center;
 }
-main .p_inicio a, main #sobremi_descripcion a {
+main .p_home a, main #sobremi_descripcion a {
   text-decoration: underline;
 }
 
-@media (max-width: 650px) {
-  main .p_inicio, main #sobremi_descripcion {
-    padding: 0;
+@media (max-width: 900px) {
+  main .p_home, main #sobremi_descripcion {
+    padding: 0 0 10% 0;
   }
 }
-@media (min-width: 650px) and (max-width: 1060px) {
-  main .p_inicio, main #sobremi_descripcion {
+@media (max-width: 600px) {
+  main .p_home, main #sobremi_descripcion {
     padding: 0;
   }
 }
@@ -227,8 +256,7 @@ main .p_inicio a, main #sobremi_descripcion a {
 .cont_proyecto {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 3fr 5fr;
-  gap: 0px 0px;
+  grid-template-rows: 1fr 8fr 5fr;
   align-items: center;
   width: 100%;
   height: 28em;
@@ -244,9 +272,11 @@ main .p_inicio a, main #sobremi_descripcion a {
   text-align: center;
 }
 .cont_proyecto .img_proyecto {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 250px;
   border-radius: 10px;
   width: 100%;
-  min-height: 169px;
   border: 1px solid black;
 }
 .cont_proyecto .descripcion_proyecto {

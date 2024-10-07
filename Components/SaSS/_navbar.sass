@@ -3,10 +3,12 @@
     padding: 10px 15px
 
 #navbar
-    width: 100vw
+    width: 30vw
     position: fixed
     top: 25px
+    left: 35%
     @include divCentrado
+    display: inline
     z-index: 9999
 
 
@@ -22,6 +24,19 @@
     transition: 0.8s
     &:hover
         background-color: $transparenteOscuro
+
+.flags
+    width: 75px
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.flags__item
+    width: 30px
+
+.flags__img
+    display: block
+    cursor: pointer
 
 @media (max-width: 600px) 
     #nav_principal

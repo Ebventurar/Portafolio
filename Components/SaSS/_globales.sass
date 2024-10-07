@@ -28,15 +28,17 @@ a
     text-decoration: none
     color: white
 
-main
-    margin: 150px 70px 40px 70px
-
-
 h1
     font-family: 'Geologica', sans-serif
-    font-size: 75px
+    font-size: 5rem
     text-align: center
-    margin: 60px 0
+    padding: 10% 5% 5% 5%
+
+.main_div
+    min-height: 90vh
+    display: flex
+    flex-direction: column
+    justify-content: center
 
 @mixin divCentrado
     display: flex
@@ -47,10 +49,16 @@ h1
     background-color: $colorfondo
     backdrop-filter: blur($blur) saturate($saturado)    
 
-@media (max-width: 600px) 
-    main
-        width: 100%
-        margin: 150px 0 40px 0
-        padding: 0 30px
+@media (max-width: 900px) 
+    .main_div
+        padding: 5%
     h1
-        font-size: 60px
+        font-size: 4rem
+        padding-bottom: 10%
+
+@media (max-width: 600px) 
+    .main_div
+        padding: 15% 5%
+    h1
+        font-size: 2rem
+        padding-bottom: 10%
